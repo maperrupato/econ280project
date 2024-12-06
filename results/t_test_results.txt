@@ -1,0 +1,55 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/maperrupato/Documents/UCSD/Computation/QJE Replication/output/t_test_results.txt
+  log type:  text
+ opened on:   5 Dec 2024, 22:36:18
+
+. 
+. * Display and log results
+. display "Volker vs Bernanke Difference in estimates: " diff_v
+Volker vs Bernanke Difference in estimates: .00856992
+
+. display "Volker vs Bernanke Standard error of the difference: " se_diff_v
+Volker vs Bernanke Standard error of the difference: .02011039
+
+. display "Volker vs Bernanke t-statistic: " t_stat_v
+Volker vs Bernanke t-statistic: .42614407
+
+. 
+. display "Difference in estimates: " diff
+Difference in estimates: .00293339
+
+. display "Standard error of the difference: " se_diff
+Standard error of the difference: .01919469
+
+. display "t-statistic: " t_stat
+t-statistic: .15282286
+
+. 
+. if abs(t_stat_v) > 1.96 {
+.     display "Volker vs Bernanke: The estimates are statistically different at the 5% level."
+. } 
+
+. else {
+.     display "Volker vs Bernanke: The estimates are not statistically different at the 5% level."
+Volker vs Bernanke: The estimates are not statistically different at the 5% level.
+. }
+
+. 
+. if abs(t_stat) > 1.96 {
+.     display "Greenspan vs Bernanke: The estimates are statistically different at the 5% level."
+. } 
+
+. else {
+.     display "Greenspan vs Bernanke: The estimates are not statistically different at the 5% level."
+Greenspan vs Bernanke: The estimates are not statistically different at the 5% level.
+. }
+
+. 
+. * Close the log file
+. log close
+      name:  <unnamed>
+       log:  /Users/maperrupato/Documents/UCSD/Computation/QJE Replication/output/t_test_results.txt
+  log type:  text
+ closed on:   5 Dec 2024, 22:36:18
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
